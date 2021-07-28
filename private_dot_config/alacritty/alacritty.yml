@@ -1,0 +1,16 @@
+env:
+  TERM: alacritty
+  LANG: en_AU.UTF-8
+  LC_CTYPE: en_AU.UTF-8
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+font:
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: Medium
+  size: 10
+import:
+  - /home/emily/.config/alacritty/themes/tokyo_storm.yml
+

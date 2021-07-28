@@ -1,0 +1,59 @@
+{
+    "position": "bottom",
+    "modules-left": ["sway/workspaces"],
+    "modules-right": ["custom/music", "backlight", "pulseaudio", "battery", "clock", "tray"],
+    // Modules configuration
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+	 	"persistent_workspaces": {
+	 		"1": [],
+	 		"2": [],
+	 		"3": [],
+	 		"4": [],
+	 		"5": [],
+	 		"6": [],
+	 		"7": [],
+	 		"8": [],
+	 		"9": [],
+	 		"10": []
+	},
+     },
+	"tray": {
+    	"spacing": 10,
+	},
+	"custom/music": {
+    		"format": " {}",
+		"interval": 1,
+		"exec": "/home/emily/.scripts/player.sh"
+	},
+	"clock": {
+		"format": " {:%H:%M}",
+        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        	"format-alt": " {:%d/%m/%Y}"
+	},
+	"battery": {
+        	"states": {
+            		"warning": 20,
+            		"critical": 5,
+        	},
+        	"format": "{icon} {capacity}%",
+        	"format-icons": {
+				"default": ["", "", "", "", ""],
+				"charging": ["", "", "", "", ""]
+			},
+	},
+	"backlight": {
+		"device": "intel_backlight",
+		"on-scroll-up": "light -A 10",
+		"on-scroll-down": "light -U 10",
+		"format": "{icon} {percent}%",
+		"format-icons": ["", "", ""]
+	},
+	"pulseaudio": {
+		"on-click": "pavucontrol",
+		"format": "{icon} {volume}%",
+        	"format-muted": "ﱝ Muted",
+        "format-icons": ["", "", "墳", ""]
+    }
+}
