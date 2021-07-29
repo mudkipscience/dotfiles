@@ -18,7 +18,7 @@ window#waybar {
 	border-radius: 5px;
 }
 #workspaces button {
-    padding: 5px 10px;
+    padding: 5px 8px;
     color: #c0caf5;
 }
 
@@ -34,16 +34,9 @@ window#waybar {
 	border-radius: 5px;
 }
 
-#mode {
-	background-color: #24283b;
-	color: #c0caf5;
-	margin-bottom: 8px;
-	border-radius: 5px;
-	padding: 5px 10px;
-}
 #tray, #custom-music, #clock, #battery, #pulseaudio, #backlight {
 	background-color: #24283b;
-	padding: 5px 10px;
+	padding: 5px 8px;
 	margin-bottom: 8px;
 }
 
@@ -69,13 +62,13 @@ window#waybar {
 }
 
 #custom-music {
-	border-radius: 5px 0px 0px 5px;
 	color: #f7768e;
+	border-radius: 5px 0px 0px 5px;
 }
 
 #tray {
-    border-radius: 0px 5px 5px 0px;
-    margin-right: 10px;
+	border-radius: 0px 5px 5px 0px;
+    margin-right: 8px;
 }
 
 #pulseaudio {
