@@ -4,15 +4,11 @@
 exec mako
 exec nm-applet --indicator
 exec blueman-applet
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec thunar --daemon
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Import GTK settings
-exec_always {
-    gsettings set $gnome-schema gtk-theme 'tokyo-storm'
-    gsettings set $gnome-schema icon-theme 'tokyo-storm'
-    gsettings set $gnome-schema font-name 'JetBrainsMono Nerd Font 10'
-}
+exec_always ~/.scripts/import-gsettings.sh
 
 ### Styling
 default_border pixel 2
@@ -24,8 +20,8 @@ font pango:JetBrainsMono Nerd Font 10px
 # class                 border  backgr. text    indicator child_border
 client.focused          #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
 client.focused_inactive #7aa2f7 #414868 #c0caf5 #7dcfff   #7aa2f7
-client.unfocused        #414868 #24283b #a9b1d6 #7dcfff   #414868
-client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
+client.unfocused        #414868 #1a1b26 #a9b1d6 #7dcfff   #414868
+client.urgent           #e0af68 #e0af68 #15161E #7dcfff   #e0af68
 
 ### Variables
 set $mod Mod4
@@ -35,11 +31,12 @@ set $up k
 set $right l
 set $term alacritty
 set $menu wofi
-set $wallpaper ~/Pictures/wallhaven-wq1wlr.jpg
+set $wallpaper ~/Pictures/akkodian.jpg
 
 ### Special snowflake window rules
 for_window [app_id="pavucontrol"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
+for_window [app_id="galculator"] floating enable
 for_window [title="File Operation Progress"] floating enable
 
 ### Key bindings

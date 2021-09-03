@@ -12,5 +12,4 @@ font:
     style: Medium
   size: 10
 import:
-  - /home/emily/.config/alacritty/themes/tokyo_storm.yml
-
+  - /home/emily/.config/alacritty/themes/tokyo_night.yml

@@ -1,17 +1,17 @@
 window {
     margin: 0px;
     border: 2px solid #414868;
-    border-radius: 5px;
-    background-color: #24283b;
+    border-radius: 4px;
+    background-color: #1a1b26;
     font-family: "JetBrainsMono Nerd Font";
     font-size: 10px;
     }
     
     #input {
     margin: 5px;
-    border: 1px solid #24283b;
+    border: 1px solid #1a1b26;
     color: #c0caf5;
-    background-color: #24283b;
+    background-color: #1a1b26;
     }
     
     #input image {
@@ -21,13 +21,13 @@ window {
     #inner-box {
     margin: 5px;
     border: none;
-    background-color: #24283b;
+    background-color: #1a1b26;
     }
     
     #outer-box {
     margin: 5px;
     border: none;
-    background-color: #24283b;
+    background-color: #1a1b26;
     }
     
     #scroll {
