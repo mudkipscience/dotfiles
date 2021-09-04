@@ -32,6 +32,7 @@ set $right l
 set $term alacritty
 set $menu wofi
 set $wallpaper ~/Pictures/akkodian.jpg
+set $lockcmd swaylock --screenshots --clock --indicator-idle-visible --indicator-radius 100 --indicator-thickness 4 --font JetBrainsMonoNerdFont --ignore-empty-password --ring-color 414868 --key-hl-color 7aa2f7 --text-color c0caf5 --line-color 414868 --inside-color 15161E --separator-color 00000000 --fade-in 0.1 --effect-scale 0.5 --effect-blur 7x3 --effect-scale 2 --effect-vignette 0.5:0.5
 
 ### Special snowflake window rules
 for_window [app_id="pavucontrol"] floating enable
@@ -54,7 +55,7 @@ for_window [title="File Operation Progress"] floating enable
     bindsym $mod+s exec grimshot copy output
     bindsym $mod+shift+s exec grimshot copy area
     # Lock screen
-    bindsym $mod+Shift+Delete exec swaylock
+    bindsym $mod+Shift+Delete exec $lockcmd
     # volume controls
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioLowerVolume exec pamixer -d 5
@@ -209,7 +210,7 @@ output * bg $wallpaper fill
 ### Idle configuration
 exec swayidle -w \
        before-sleep 'loginctl lock-session $XDG_SESSION_ID' \
-       lock 'swaylock'
+       lock '$lockcmd'
 
 ### Input configuration
 #

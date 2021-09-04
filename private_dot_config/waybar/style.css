@@ -61,12 +61,12 @@ window#waybar {
 
 #clock {
 	color: #7aa2f7;
-	border-radius: 0px 3px 3px 0px;
+	border-radius: 0px 5px 5px 0px;
     margin-right: 8px;
 	border-right: 2px solid #414868;
 }
 
 #tray {
-	border-radius: 5px 0px 0px 3px;
+	border-radius: 5px 0px 0px 5px;
 	border-left: 2px solid #414868;
 }
